@@ -1,0 +1,13 @@
+{
+    "code": "Kod",
+    "total": "Toplam",
+    "sell": "Satış yap",
+    "long_code": "Tarama kodu çok uzun.",
+    "not_in_inventory": "Envanterde yok.",
+    "currency": "₺",
+    "set_amount": "Miktarı ayarla",
+    "quantity": "Miktar",
+    "price": "Fiyat",
+    "name": "Adı",
+    "not_number": "Miktar pozitif bir sayı olmalıdır"
+}
