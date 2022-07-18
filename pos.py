@@ -226,15 +226,9 @@ def setup_ui(root):
     treeview.bind('<Double-Button>', on_shopping_list_click)
 
     # Check code callback
-    def on_code_modified(code_string):
+    def on_code_return(event):
         code = code_string.get()
-        if len(code) < 13:
-            return
         code_string.set("")
-
-        if len(code) > 13:
-            messagebox.showinfo("Error", lang["long_code"], icon='error')
-            return
 
         if code not in inventory:
             messagebox.showinfo(
@@ -250,8 +244,9 @@ def setup_ui(root):
 
         update_shopping_list()
 
-    code_string.trace("w", lambda name, index, mode,
-                      sv=code_string: on_code_modified(sv))
+    #code_string.trace("w", lambda name, index, mode,
+    #                  sv=code_string: on_code_modified(sv))
+    code_entry.bind("<Return>", on_code_return)
     
     update_shopping_list()
 
