@@ -69,10 +69,10 @@ def load_inventory():
 
 
 def save_inventory():
-    f = codecs.open(INVENTORY_PATH, "w", encoding="utf-8")
-    f.write("code,name,price,stock\n".encode(utf-8))
+    f = codecs.open(INVENTORY_PATH, "wb", encoding="utf-8")
+    f.write("code,name,price,stock\n")
     for code in inventory:
-        f.write((code + "," + inventory[code][0] + "," + str(inventory[code][1]) + "," + str(inventory[code][2]) + '\n').encode("utf-8"))
+        f.write(code + "," + inventory[code][0] + "," + str(inventory[code][1]) + "," + str(inventory[code][2]) + '\n')
     f.close()
 
 
