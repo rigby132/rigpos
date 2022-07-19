@@ -38,7 +38,7 @@ def convert_int_to_price(value):
 
 
 def load_lang():
-    f = open(LANG_PATH)
+    f = codecs.open(LANG_PATH, "r", encoding="utf-8")
     
     global lang
     lang = json.load(f)
