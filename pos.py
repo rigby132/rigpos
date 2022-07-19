@@ -3,6 +3,7 @@
 # Copyright (c) 2022
 
 import json
+import codecs
 import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
@@ -46,14 +47,20 @@ def load_lang():
 
 
 def load_inventory():
-    f = open(INVENTORY_PATH, "r")
+    f = codecs.open(INVENTORY_PATH, "r", encoding="utf-8")
     global inventory
     inventory = {}
     
     f.readline()
     
+    i = 0
     for line in f.readlines():
-        code, name, price, stock = line.strip('\n').split(sep=',')
+        i+=1
+        try:
+            code, name, price, stock = line.strip('\n').split(sep=',')
+        except ValueError:
+            print("Could not read line:", i)
+            
         price = int(price)
         stock = int(stock)
         inventory[code] = [name, price, stock]
@@ -62,10 +69,10 @@ def load_inventory():
 
 
 def save_inventory():
-    f = open(INVENTORY_PATH, "w")
-    f.write("code,name,price,stock\n")
+    f = codecs.open(INVENTORY_PATH, "w", encoding="utf-8")
+    f.write("code,name,price,stock\n".encode(utf-8))
     for code in inventory:
-        f.write(code + "," + inventory[code][0] + "," + str(inventory[code][1]) + "," + str(inventory[code][2]) + '\n')
+        f.write((code + "," + inventory[code][0] + "," + str(inventory[code][1]) + "," + str(inventory[code][2]) + '\n').encode("utf-8"))
     f.close()
 
 

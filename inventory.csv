@@ -1,4 +1,161 @@
-code,name,price,stock
-4015291007740,Vivess notebook,223,29
-5038862435345,Innocent Blue Break,499,25
-4005401345510,Faber Castell GRIP 1345 0.5,287,10
+﻿code,name,price,stock
+86941310,Winston Red Long,2900,3
+86941297,Winston Red ,2900,4
+86939553,Winston Slim Blue Cpb,2900,2
+86939560,Winston Slim GrayCpb ,2900,6
+86941334,Winston Blue Long,2900,7
+40329574,Winston Blue ,2900,3
+86940559,Winston Xsence Black,3000,7
+86940566,Winston Xsence Gray,3000,6
+86937887,Winston Dark Blue Long,2800,8
+86937894,Winston Deep Blue ,2800,2
+86941938,Winston Slender Dark Blue ,2800,4
+86941945,Winston Slender Deep Blue ,2800,2
+86940580,Winston Slender Gray,2800,10
+86941211,Camel Yellow Long,2800,12
+86941204,Camel Yellow  SP,2800,10
+86941198,camel Yellow  ,2800,9
+86933001,Camel White,2800,8
+86941341,Winston Gray,2900,4
+86940528,Winston White,2900,5
+86936569,Camel Deep Blue Long,2800,5
+86933261,Camel Deep Blue ,2800,7
+86932936,Camel Black,2800,6
+86937832,Camel Brown,2800,5
+86940320,Camel Slender Blue Line,2750,3
+86940337,Camel SlenderGray Line,2750,7
+86940412,Monte Carlo Red,2750,6
+86935456,Monte Carlo Night Blue Long,2750,3
+86940498,Monte Carlo Slendert Blue ,2750,6
+86940481,Monte Carlo Slender Red,2750,4
+86935319,Monte Carlo Slender Night Blue,2750,8
+86939577,LD Red Long,2750,15
+86932356,LD Slims,2750,6
+86932035,LD Blue,2750,8
+86912440,Marlboro Red Long,3100,5
+86912488,Parliament Night Blue Pack,3150,8
+86919951,Parliament Aqua Blue ,3150,9
+86931465,Parliament Reserve,3150,2
+86918725,Muratti Rosso,2900,4
+86933797,Parliament Aqua Blue Slims,3150,7
+86940610,Parliament Midnight Blue ,3050,8
+86936019,Chesterfıeld Aqua Click,2750,5
+86935999,Chesterfield Navy Blue Long,2750,7
+86932295,Chesterfıeld Blue Long,2750,5
+86935036,Chesterfıeld Blue ,2750,6
+86938198,Chesterfıeld Mode Navy,2750,9
+86935401,Chesterfıeld Navy Blue,2750,6
+86916240,Marlboro Touch,3100,1
+86935241,Marlboro Touch Blue,3000,7
+86941907,Marlboro Edge,2900,8
+86935258,Marlboro Touch Gray,3000,7
+86937764,Marlboro Edge Sky,2900,5
+86941914,Marlboro Touch White,3000,6
+86912464,Marlboro Red,3100,9
+86931854,Lark Blue,2800,2
+86932516,Lark Blue Long,2800,4
+4030600023280,Polo Slims Blue,2700,5
+86919937,L&M Red Label,2750,3
+86935012,L&M Red Label Lb,2750,9
+86912495,L&M Red Label Long,2750,11
+4030600021453,West Grey,2500,4
+42067214,West White,2500,5
+4030600192030,West Navy,2500,7
+8690797107215,Süzen 92 Slim,2000,6
+4030600024690,Davidoff White Slims,3100,9
+86940870,Tekel 2000 Mavi,2750,9
+86940887,Tekel 2000 Mavi Uzun,2750,9
+86934879,Tekel 2001 Kırmızı,2750,4
+86940856,Tekel 2000 Kırmızı,2750,9
+86940863,Tekel 2000 Kırmızı Uzun,2750,6
+86941433,Tekel 2001 Mavi Uzun,2750,9
+86940900,Tekel 2001 Kırmızı Uzun,2750,5
+86940740,Rothmans Blue Long,2750,8
+86941419,Viceroy Red Long,2800,6
+86940832,Viceroy Nany,2800,5
+86940771,Rothmans D Range Blue ,2750,2
+86940733,Rothmans Blue ,2750,4
+86940719,Kent Slims Black,3100,6
+86940726,Kent Slims Grey,3100,3
+46089953,Kent Switch,2800,6
+86941440,Kent Dark Blue,2800,9
+86938457,Kent White,2900,3
+86938433,Kent Blue,2900,6
+86940702,Kent Drange Grey Long,2800,5
+86940696,Kent Drange Blue Long,2800,9
+86940689,Kent D Range Grey,2800,3
+86940672,Kent D Range Blue,2800,8
+8692055956191,Camel Yellow 100,4800,1
+86943642,Marlboro Roll 50,3000,2
+8697713833845,Peros Soft,2000,2
+8690536024179,Famillia mendil,250,9
+8695077012647,Cay bardagi,2000,1
+4697302240140,camasir mandali,1000,5
+8697417880039,camasir mandali akyazi,750,5
+8690771120209,Billur tuz 750 gr,750,7
+8690771130406,Billur tuz 1500 gr,1500,6
+8690629152000,Krem Şanti Sade,1750,3
+8001841560977,Orkid Ultra Extra,3200,2
+4015400934318,Orkid Ultra Extra 22,3200,1
+8692382031974,Senso Pecete,1000,1
+8697429972043,Ecco Pecete,600,1
+8692382033534,Pufla pecete,600,1
+8691900172946,Kotex 2 in 1,1750,1
+8682241201075,Sleepy,2000,1
+8682241205035,Lady fit cotton pad,2500,1
+4015400435877,Orkid gunluk,1000,1
+8690530212688,Solo Pecete,1300,1
+8691900174049,Kotex Ultra uzun,3000,1
+8691900174056,Kotex ultra gece,3000,1
+8694726007508,MGS Kup seker ,2700,2
+8690530001336,Selpak mendil,250,10
+8681166209135,Mentol,1000,40
+8698605683432,Bulasik teli,1300,1
+6936805400186,Kurdan orta boy,750,8
+8697762191260,Koli bandı,750,6
+8692817001169,BZM Enerji tasarruflu ampul,1500,7
+8682744570319,İtalyona cakmak,500,75
+8694051030097,Puma oyun kagidi,2000,10
+8699721111007,Bez yarabandi,250,50
+8681689904623,Nerox mandal,1000,1
+8698514406245,İgne seti,1500,1
+8710908811159,Domestos Tuvalet Blogu,1500,2
+8691741020208,Derby eldiven,1500,1
+8680599754786,55 igne seti,1500,2
+8697426410012,Katmer un 1 kg,1500,4
+9000101418699,Perwol  Siyah doku,4500,1
+9000101418705,Perwol Renk doku,4500,1
+8690572412275,Perwol Yenileme,3000,2
+9000100944557,Vernel Kalıcı parfüm,5000,1
+9000100944595,Vernel Kalıcı parfüm deniz esintisi,5000,1
+8690570536461,Finish Quantum,7500,1
+8001480021822,ACE Camasir suyu,1500,1
+8692311000125,Yeni kavaklıdere Üzüm sirkesi,1750,1
+8692311004635,yeni kavaklıdere Beyaz sirke,1500,1
+8690102760029,Taris Üzüm sirkesi,1500,1
+8682101502243,Aytac aycicek yagi,8000,1
+8691321416087,Yonca Aycicek yagi,14000,1
+8691573001277,Burcu domates salcasi,2000,1
+8682884000028,Turk seker domates salcasi,1700,1
+8690575012519,Tamek Domates salcasi,2000,1
+8690635030163,Tat Domates salcasi,2000,1
+8693354005894,Butun Uzum sirkesi,1000,1
+8690102760128,Taris Üzüm sirkesi,1300,1
+8693354007249,Doganay elma sirkesi,1000,2
+8693354005894,Doganay elma sirkesi,1000,1
+8691011050027,Kemal Kürker Limon sosu,1000,1
+8690102760296,Taris Elma sirkesi,1500,5
+9000100514149,Persil Professional,10000,1
+8680168790801,Concon Parfüm,750,11
+8692830102638,oz yesil kolonyası,750,9
+8690615010000,Kibrit,250,6
+8692641003001,Polo  cakmak gazi,1800,3
+8682241205158,Baby mendil,1500,1
+8682109042918,Tings mendil,400,1
+8681110232912,Mikro fiber temizlik bezi,1500,3
+8683489690010,Jumbo cop torbasi,1300,3
+8691206151027,Stil Ayakkabi boyasi,1000,1
+8691206008024,Stil Ayakkabi boyasi klasik,700,1
+8682009365360,Papatya pamuk,1000,1
+8691275000028,İpek pamuk,1500,1
+8692730500039,Acord Temizlik bezi,1200,1
