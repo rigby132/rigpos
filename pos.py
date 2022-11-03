@@ -2,22 +2,26 @@
 # By Rigby132
 # Copyright (c) 2022
 
+from datetime import date
 import json
 import codecs
 import tkinter as tk
+import tkinter.font
 from tkinter import ttk
 from tkinter import messagebox
 
 MIN_WIDTH = 800
 MIN_HEIGHT = 600
+FONT_SIZE = 26
 INVENTORY_PATH = "./inventory.csv"
-LOG_PATH = "./log.csv"
+LOG_PATH = "./toplam.json"
 LANG_PATH = "./lang.json"
 
 # Important vars
 inventory = {}
 lang = {"code": "Code",
         "total": "Total",
+        "day_total": "Daily total",
         "sell": "Sell",
         "long_code": "Scancode too long.",
         "not_in_inventory": "Not in inventory.",
@@ -30,6 +34,60 @@ lang = {"code": "Code",
 shopping_list = {}
 
 
+def get_day_total():
+    f = codecs.open(LOG_PATH, "r", encoding="utf-8")
+    log = json.load(f)
+    f.close()
+
+    today = date.today().isoformat()
+
+    if today in log:
+        return log[today]
+    else:
+        return 0
+
+
+def log_month_total():
+    f = codecs.open(LOG_PATH, "r", encoding="utf-8")
+    log = json.load(f)
+    f.close()
+
+    month = date.today().isoformat()[:-3]
+
+    total_month = 0
+
+    for day in log.keys():
+        if day[:-3] == month:
+            total_month += log[day]
+
+    log[month] = total_month
+
+    log = dict(sorted(log.items()))
+
+    f = codecs.open(LOG_PATH, "w", encoding="utf-8")
+    json.dump(log, f, indent=4)
+    f.close()
+
+
+def log_sale(total):
+    f = codecs.open(LOG_PATH, "r", encoding="utf-8")
+    log = json.load(f)
+    f.close()
+
+    today = date.today().isoformat()
+
+    if today in log:
+        log[today] += total
+    else:
+        log[today] = total
+
+    log = dict(sorted(log.items()))
+
+    f = codecs.open(LOG_PATH, "w", encoding="utf-8")
+    json.dump(log, f, indent=4)
+    f.close()
+
+
 def convert_int_to_price(value):
     value_str = str(value)
     value_str = '0'*(3 - len(value_str)) + value_str
@@ -39,7 +97,7 @@ def convert_int_to_price(value):
 
 def load_lang():
     f = codecs.open(LANG_PATH, "r", encoding="utf-8")
-    
+
     global lang
     lang = json.load(f)
 
@@ -50,9 +108,9 @@ def load_inventory():
     f = codecs.open(INVENTORY_PATH, "r", encoding="utf-8")
     global inventory
     inventory = {}
-    
+
     f.readline()
-    
+
     i = 0
     for line in f.readlines():
         i+=1
@@ -60,11 +118,11 @@ def load_inventory():
             code, name, price, stock = line.strip('\n').split(sep=',')
         except ValueError:
             print("Could not read line:", i)
-            
+
         price = int(price)
         stock = int(stock)
         inventory[code] = [name, price, stock]
-    
+
     f.close()
 
 
@@ -139,6 +197,7 @@ def setup_ui(root):
     options_frame.columnconfigure(0, weight=1)
     options_frame.rowconfigure(0, weight=1)
     options_frame.rowconfigure(1, weight=1)
+    options_frame.rowconfigure(2, weight=1)
 
     # ENTRY----------------------------------
     entry_frame = tk.Frame(options_frame)
@@ -157,6 +216,17 @@ def setup_ui(root):
     # PRICE----------------------------------
     total_label = tk.Label(options_frame, text=lang["total"]+": ")
     total_label.grid(row=1, column=0, padx=10, pady=10, sticky="ns")
+
+    # DAILY TOTAL----------------------------
+    day_total_label = tk.Label(options_frame, text=lang["day_total"]+": ")
+    day_total_label.grid(row=2, column=0, padx=10, pady=10, sticky="ns")
+
+    def update_day_total():
+        # Update day total
+        day_total = get_day_total()
+        day_total_str = convert_int_to_price(day_total)
+        day_total_label.config(text=lang["day_total"] + ": " + day_total_str)
+
 
     # CALLBACKS------------------------------
     def update_shopping_list():
@@ -181,12 +251,15 @@ def setup_ui(root):
     def apply_sale():
         for code in shopping_list:
             inventory[code][2] -= shopping_list[code]
-            
+
+        log_sale(get_total())
+        log_month_total()
         save_inventory()
-        
+
         shopping_list.clear()
         update_shopping_list()
-    
+        update_day_total()
+
     sell_button = tk.Button(
         options_frame, text=lang["sell"], command=apply_sale)
     sell_button.grid(row=2, column=0, padx=10, pady=10, sticky="wes")
@@ -254,8 +327,9 @@ def setup_ui(root):
     #code_string.trace("w", lambda name, index, mode,
     #                  sv=code_string: on_code_modified(sv))
     code_entry.bind("<Return>", on_code_return)
-    
+
     update_shopping_list()
+    update_day_total()
 
 
 def main():
@@ -272,6 +346,10 @@ def main():
     root.title("POS-SYSTEM")
     root.minsize(MIN_WIDTH, MIN_HEIGHT)
     root.geometry("640x480")
+
+    default_font = tk.font.nametofont("TkDefaultFont")
+    default_font.configure(size=26)
+    root.option_add("*Font", default_font)
 
     root.columnconfigure(0, weight=4)
     root.rowconfigure(0, weight=4)

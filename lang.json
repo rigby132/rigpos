@@ -1,6 +1,7 @@
 {
     "code": "Kod",
     "total": "Toplam",
+    "day_total": "Günlük toplam",
     "sell": "Satış yap",
     "long_code": "Tarama kodu çok uzun.",
     "not_in_inventory": "Envanterde yok.",
