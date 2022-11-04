@@ -12,7 +12,7 @@ from tkinter import messagebox
 
 MIN_WIDTH = 800
 MIN_HEIGHT = 600
-FONT_SIZE = 26
+FONT_SIZE = 30
 INVENTORY_PATH = "./inventory.csv"
 LOG_PATH = "./toplam.json"
 LANG_PATH = "./lang.json"
@@ -348,7 +348,7 @@ def main():
     root.geometry("640x480")
 
     default_font = tk.font.nametofont("TkDefaultFont")
-    default_font.configure(size=26)
+    default_font.configure(size=FONT_SIZE)
     root.option_add("*Font", default_font)
 
     root.columnconfigure(0, weight=4)
